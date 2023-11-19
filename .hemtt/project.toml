@@ -1,0 +1,15 @@
+name = "ARCOMM Config"
+author = "ARCOMM"
+prefix = "arc_cfg"
+mainprefix = "z"
+
+[version]
+git_hash = 0
+
+[hemtt.config]
+preset = "Hemtt"
+
+[hemtt.launch]
+workshop = [
+    "450814997", # CBA_A3
+]
