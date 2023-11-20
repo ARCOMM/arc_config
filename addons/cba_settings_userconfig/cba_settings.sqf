@@ -424,7 +424,7 @@ force ace_medical_statemachine_fatalInjuriesPlayer = 0;
  * 1 - Bandages get their special properties.
  * 2 - Bandages are special and wounds reopen until stitched.
  */
-force ace_medical_treatment_advancedBandages = 0;
+force ace_medical_treatment_advancedBandages = 2;
 /* Enables a player to get pulse, blood presure and response. When false CPR is only available when the target is in cardiac arrest. */
 force ace_medical_treatment_advancedDiagnose = true;
 /* Enables the more complete drug system. Also enables Adenosine. */
@@ -526,7 +526,7 @@ force ace_medical_treatment_treatmentTimeSplint = 7;
 force ace_medical_treatment_treatmentTimeTourniquet = 7;
 force ace_medical_treatment_woundStitchTime = 5;
 /* Multiplier on wound chance. */
-force ace_medical_treatment_woundReopenChance = 1;
+force ace_medical_treatment_woundReopenChance = 0;
 
 /* ACE Name Tags */
 /* Opaqueness of the name. */
@@ -828,25 +828,25 @@ force acre_sys_signal_signalModel = 3;
 /*
  * These settings are for the normal AI components and are applied to all AI automatically.
  */
-force arc_misc_difficulty_enabled = true;
-force arc_misc_difficulty_aimingAccuracy = 0.11;
-force arc_misc_difficulty_aimingShake = 0.11;
-force arc_misc_difficulty_aimingSpeed = 0.45;
-force arc_misc_difficulty_allowCrewInImmobile = 2;
-force arc_misc_difficulty_allowFleeing = 0.5;
-force arc_misc_difficulty_AwareFormationSoft = true;
-force arc_misc_difficulty_CombatFormationSoft = true;
-force arc_misc_difficulty_commanding = 0.18;
-force arc_misc_difficulty_courage = 0.18;
-force arc_misc_difficulty_disableRemoteSensors = false;
-force arc_misc_difficulty_enableAttack = 0;
-force arc_misc_difficulty_endurance = 1;
-force arc_misc_difficulty_general = 0.2;
-force arc_misc_difficulty_randomSkill = 0.1;
-force arc_misc_difficulty_reloadSpeed = 1;
-force arc_misc_difficulty_spotDistance = 1;
-force arc_misc_difficulty_spotTime = 0.18;
-force arc_misc_difficulty_useAISteeringComponent = true;
+force arc_dif_main_enabled = true;
+force arc_dif_main_aimingAccuracy = 0.11;
+force arc_dif_main_aimingShake = 0.11;
+force arc_dif_main_aimingSpeed = 0.45;
+force arc_dif_main_allowCrewInImmobile = 2;
+force arc_dif_main_allowFleeing = 0.5;
+force arc_dif_main_AwareFormationSoft = true;
+force arc_dif_main_CombatFormationSoft = true;
+force arc_dif_main_commanding = 0.18;
+force arc_dif_main_courage = 0.18;
+force arc_dif_main_disableRemoteSensors = false;
+force arc_dif_main_enableAttack = 0;
+force arc_dif_main_endurance = 1;
+force arc_dif_main_general = 0.2;
+force arc_dif_main_randomSkill = 0.1;
+force arc_dif_main_reloadSpeed = 1;
+force arc_dif_main_spotDistance = 1;
+force arc_dif_main_spotTime = 0.18;
+force arc_dif_main_useAISteeringComponent = true;
 
 // Death And Hit reactions
 /* Whether to perform player hit reactions. */

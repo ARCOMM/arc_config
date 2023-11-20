@@ -13,5 +13,6 @@ class CfgPatches {
 };
 
 #include "ACE_detector.hpp"
+#include "ace_medical_replacementItems.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"
