@@ -1,0 +1,4 @@
+[files]
+exclude = [
+    "optional_mods.txt",
+]
