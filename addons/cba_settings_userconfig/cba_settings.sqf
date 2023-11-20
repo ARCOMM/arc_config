@@ -1,8 +1,8 @@
 /* CWR III */
-/* Disables CWR3's custom logo override. 0=enabled, 1=disabled */
-force force cwr3_intro_customLogo = 1;
-/* Disables CWR3's deletion of the three big menu buttons. 0=no menu, 1=yes menu */
-force force cwr3_intro_disableSpotlight = 1;
+/* Disables CWR3's custom logo override. */
+force force cwr3_intro_customLogo = false;
+/* Disables CWR3's deletion of the three big menu buttons. */
+force force cwr3_intro_disableSpotlight = false;
 
 /* A3TI */
 /* Enables A3TI for the ACE javelin launcher. */
@@ -429,8 +429,17 @@ force ace_medical_treatment_advancedBandages = 0;
 force ace_medical_treatment_advancedDiagnose = true;
 /* Enables the more complete drug system. Also enables Adenosine. */
 force ace_medical_treatment_advancedMedication = true;
-/* Allows unconscious units to be body bagged or buried. */
+/* Allows unconscious units to be body bagged. */
 force ace_medical_treatment_allowBodyBagUnconscious = false;
+/*
+ * When grave digging is allowed.
+ * 0 - Disabled
+ * 1 - Only dead
+ * 2 - Always
+ */
+force ace_medical_treatment_allowGraveDigging = 1;
+/* Whether placing grave markers is allowed. */
+force ace_medical_treatment_graveDiggingMarker = true;
 /* Drops litter items when treating with the respective tools. */
 force ace_medical_treatment_allowLitterCreation = true;
 /* 
@@ -441,7 +450,7 @@ force ace_medical_treatment_allowLitterCreation = true;
  */
 force ace_medical_treatment_allowSelfIV = 1;
 force ace_medical_treatment_allowSelfPAK = 0;
-force ace_medical_treatment_allowSelfStitch = 0;
+force ace_medical_treatment_allowSelfStitch = 1;
 /*
  * Who's medical equipment is used first when one unit treats another.
  * 0 - Patient first.
@@ -449,8 +458,13 @@ force ace_medical_treatment_allowSelfStitch = 0;
  * 2 - Only the medics equipment.
  */
 force ace_medical_treatment_allowSharedEquipment = 0;
-/* Apparently defunct. */
-force ace_medical_treatment_clearTraumaAfterBandage = false;
+/*
+ * When to clear trauma.
+ * 0 - Never
+ * 1 - After stitching
+ * 2 - After bandaging
+ */
+force ace_medical_treatment_clearTrauma = 1;
 /* Whether PAKs are used up. */
 force ace_medical_treatment_consumePAK = 1;
 /*
@@ -459,7 +473,7 @@ force ace_medical_treatment_consumePAK = 1;
  * 1 - The surgical kit.
  * 2 - The suture.
  */
-force ace_medical_treatment_consumeSurgicalKit = 0;
+force ace_medical_treatment_consumeSurgicalKit = 2;
 /*
  * What happens when vanilla medical items are detected:
  * 0 - The items are converted to ACE equivalents.
@@ -484,6 +498,7 @@ force ace_medical_treatment_litterCleanupDelay = 600;
  */
 force ace_medical_treatment_locationEpinephrine = 0;
 force ace_medical_treatment_locationPAK = 3;
+force ace_medical_treatment_locationIV = 0;
 force ace_medical_treatment_locationSurgicalKit = 0;
 /* Whether units get boosted to the next level when near a medical vehicles and facilities. */
 force ace_medical_treatment_locationsBoostTraining = true;
@@ -852,7 +867,7 @@ force vet_unflipping_vehicle_mass_limit = 100000;
  */
 force cba_network_loadoutValidation = 2;
 
-// CBA Weapons
+/* CBA Weapons */
 /* Makes disposables actually one-shot and spawns ammo on removal from inventory. */
 force cba_disposable_replaceDisposableLauncher = true;
 

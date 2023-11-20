@@ -3,3 +3,5 @@
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 
 #define ARC_AUTHOR "ARCOMM"
+
+#define HIDE_CLASS(x,y) class x: y {scope = 1; scopeArsenal = 0;}
