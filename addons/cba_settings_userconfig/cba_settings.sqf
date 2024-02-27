@@ -217,7 +217,7 @@ force ace_hearing_unconsciousnessVolume = 0.4;
 
 /* ACE Interaction */
 /* Stops players from receiving negative ratings, meaning that they will never become renegade. */
-force ace_interaction_disableNegativeRating = false;
+force ace_interaction_disableNegativeRating = true;
 /* Allows team management through ACE interaction options. */
 force ace_interaction_enableTeamManagement = true;
 /* Allows the team leader to change the name of their group through an ACE interaction option. */
