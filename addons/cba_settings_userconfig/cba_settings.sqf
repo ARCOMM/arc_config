@@ -465,6 +465,8 @@ force ace_medical_treatment_allowSharedEquipment = 0;
  * 2 - After bandaging
  */
 force ace_medical_treatment_clearTrauma = 1;
+/* Multipler on bandage efftiveness. */
+force ace_medical_treatment_bandageEffectiveness = 9999;
 /* Whether PAKs are used up. */
 force ace_medical_treatment_consumePAK = 1;
 /*
