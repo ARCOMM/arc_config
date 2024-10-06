@@ -6,7 +6,10 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = { "arc_cfg_main" };
+        requiredAddons[] = {
+            "arc_cfg_main",
+            "us_military_units",
+        };
         author = ARC_AUTHOR;
         VERSION_CONFIG;
     };
