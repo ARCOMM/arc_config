@@ -852,7 +852,9 @@ force arc_dif_main_useAISteeringComponent = true;
 
 // Death And Hit reactions
 /* Whether to perform player hit reactions. */
+/* Hit reaction was removed, it's probably not coming back, but just in case this remains in eternal vigil.
 force WBK_deathAnimMod_Hit_PLR = false;
+*/
 
 // VET Unflipping
 force vet_unflipping_unit_mass_limit = 1000;
