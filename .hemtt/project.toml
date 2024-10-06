@@ -2,6 +2,9 @@ name = "ARCOMM Config"
 author = "ARCOMM"
 prefix = "arc_cfg"
 mainprefix = "z"
+files = [
+    "logo_arc_ca.paa"
+]
 
 [version]
 git_hash = 0
