@@ -2,7 +2,9 @@ name = "ARCOMM Config"
 author = "ARCOMM"
 prefix = "arc_cfg"
 mainprefix = "z"
-files = [
+
+[files]
+include = [
     "logo_arc_ca.paa"
 ]
 
