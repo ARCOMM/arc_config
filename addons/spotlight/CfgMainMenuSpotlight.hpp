@@ -23,7 +23,7 @@ class CfgMainMenuSpotlight {
 		textIsQuote = 0;
 		picture = QPATHTOF(data\logo_ca.paa);
 		video = QPATHTOF(data\logo.ogv);
-		action = QUOTE(connectToServer [ARR_3('arma.arcomm.co.uk',parseNumber (profileNamespace getVariable QQGVAR(port)),'arcomm')]);
+		action = QUOTE(connectToServer [ARR_3('66.70.180.131',parseNumber (profileNamespace getVariable QQGVAR(port)),'arcomm')]);
 		actionText = "Connect to Main Server";
 		condition = COND(Logo);
 	};
