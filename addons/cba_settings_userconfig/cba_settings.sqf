@@ -780,7 +780,7 @@ force acex_headless_endMission = 2;
 /* Produce log messages fro the headless clients. */
 force acex_headless_log = false;
 /* Whether to fiddle with the loadouts if they appear broken: 0: no, 1: yes */
-force acex_headless_transferLoadout = 1;
+force acex_headless_transferLoadout = 0;
 
 /* ACEX Sitting */
 /* Whether sit interaction is placed on chairs. */

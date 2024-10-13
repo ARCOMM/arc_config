@@ -8,6 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "arc_cfg_main",
+            "arc_cfg_a3_tweaks",
             "cup_weapons_loadorder",
         };
         author = ARC_AUTHOR;
