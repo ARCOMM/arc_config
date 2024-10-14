@@ -1016,7 +1016,7 @@ force tsp_cba_animate_dynamicReadyFriend = 2;
 force tsp_cba_animate_dynamicReadyFriendAngle = 35;
 force tsp_cba_animate_dynamicReadyObject = 1;
 force tsp_cba_animate_friendsAreObjects = false;
-force tsp_cba_animate_map = true;
+//force tsp_cba_animate_map = true;
 force tsp_cba_animate_nvg = true;
 force tsp_cba_animate_walk = false;
 
