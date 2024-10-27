@@ -21,6 +21,10 @@ force A3TI_HD_VISION_UAV = true;
 /* Disables RHS's own filmgrain effect so they don't stack. */
 force A3TI_REMOVE_FILMGRAIN_RHS = true;
 
+/* LAMBS */
+/* Stops AI units from requesting distant reinforcements. */
+force lambs_main_radioDisabled = true;
+
 /* ACE3 Advanced Ballistics */
 force ace_advanced_ballistics_enabled = true;
 /* Have ammunication temerature affect ballistics. */
