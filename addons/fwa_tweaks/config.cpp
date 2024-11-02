@@ -18,3 +18,11 @@ class CfgPatches {
 
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
+
+// Remove FWA function that wraps/unwraps belts.
+class RscInGameUI {
+    class RscWeaponZeroing;
+    class sp_fwa_machinegun_animation: RscWeaponZeroing {
+        onLoad = ""; //onLoad = "_this call Spearpoint_fnc_machinegunrested;";
+    };
+};
