@@ -1,4 +1,13 @@
 class CfgWeapons {
+    class CUP_lmg_M60;
+
+    class cwr3_lmg_m60: CUP_lmg_M60 {
+        magazineWell[] += {"CBA_762x51_LINKS "};
+    };
+    class cwr3_lmg_m60e4: CUP_lmg_M60E4_norail {
+        magazineWell[] += {"CBA_762x51_LINKS "};
+    };
+
 	class ItemCore;
 	class cwr3_b_vest_base: ItemCore
 	{
