@@ -1,5 +1,6 @@
 class CfgWeapons {
     class CUP_lmg_M60;
+    class CUP_lmg_M60E4_norail;
 
     class cwr3_lmg_m60: CUP_lmg_M60 {
         magazineWell[] += {"CBA_762x51_LINKS "};
