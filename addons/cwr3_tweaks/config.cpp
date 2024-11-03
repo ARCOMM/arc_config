@@ -18,7 +18,8 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "arc_cfg_main",
-            "cwr3_soldiers_us",
+            "cwr3_weapon_config",
+            "cwr3_soldiers_us"
         };
         author = ARC_AUTHOR;
         VERSION_CONFIG;
