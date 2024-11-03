@@ -25,7 +25,7 @@ class CfgWeapons {
 	HIDE_CLASS(arifle_SPAR_03_snd_F,arifle_SPAR_03_base_F);
 	HIDE_CLASS(srifle_DMR_06_hunter_F,DMR_06_hunter_base_F);
 	HIDE_CLASS(srifle_DMR_06_camo_F,DMR_06_base_F);
-	HIDE_CLASS(srifle_DMR_06_olive_F,DMR_06_base_F);
+	HIDE_CLASS(srifle_DMR_06_olive_F,srifle_DMR_06_camo_F);
 
 	class Pistol_Base_F;
 	HIDE_CLASS(hgun_Pistol_01_F,Pistol_Base_F);
