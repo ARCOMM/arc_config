@@ -13,20 +13,16 @@ class CfgMagazineWells {
         CWR3_Magazines[] = {"cwr3_10rnd_skorpion_m"};
     };
 
-    class CBA_45ACP_Clip_6rnds {
-        CWR3_Magazines[] = {"cwr3_6rnd_revolver_m"};
-    };
-
-    class CBA_45ACP_MAC10 {
-        CWR3_Magazines[] = {"cwr3_30rnd_mac10_m"};
-    };
-
     class CBA_45ACP_1911 {
         CWR3_Magazines[] = {"cwr3_7rnd_m1911_m"};
     };
 
+    class CBA_45ACP_Clip_6rnds {
+        CWR3_Magazines[] = {"cwr3_6rnd_revolver_m"};
+    };
+
     class CBA_45ACP_Grease {
-        CWR3_Magazines[] = {"cwr3_30rnd_m3a1_m"};
+        CWR3_Magazines[] = {"cwr3_30rnd_m3a1_m","cwr3_30rnd_mac10_m"};
     };
 
     class CBA_556x45_G36 {
