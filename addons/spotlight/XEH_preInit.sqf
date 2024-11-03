@@ -1,3 +1,3 @@
 #include "script_component.hpp"
 
-#include "initSettings.sqf"
+#include "initSettings.sqf.inc"

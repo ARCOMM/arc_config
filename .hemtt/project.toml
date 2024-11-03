@@ -3,13 +3,18 @@ author = "ARCOMM"
 prefix = "arc_cfg"
 mainprefix = "z"
 
+[files]
+include = [
+    "logo_arc_ca.paa"
+]
+
 [version]
 git_hash = 0
 
 [hemtt.config]
 preset = "Hemtt"
 
-[hemtt.launch]
+[hemtt.launch.default]
 workshop = [
     "450814997", # CBA_A3
     "463939057", # ACE

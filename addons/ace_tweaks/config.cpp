@@ -6,7 +6,11 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = { "arc_cfg_main" };
+        requiredAddons[] = {
+            "arc_cfg_main",
+            "ace_minedetector",
+			"ace_medical_treatment",
+        };
         author = ARC_AUTHOR;
         VERSION_CONFIG;
     };

@@ -21,6 +21,10 @@ force A3TI_HD_VISION_UAV = true;
 /* Disables RHS's own filmgrain effect so they don't stack. */
 force A3TI_REMOVE_FILMGRAIN_RHS = true;
 
+/* LAMBS */
+/* Stops AI units from requesting distant reinforcements. */
+force lambs_main_radioDisabled = true;
+
 /* ACE3 Advanced Ballistics */
 force ace_advanced_ballistics_enabled = true;
 /* Have ammunication temerature affect ballistics. */
@@ -217,7 +221,7 @@ force ace_hearing_unconsciousnessVolume = 0.4;
 
 /* ACE Interaction */
 /* Stops players from receiving negative ratings, meaning that they will never become renegade. */
-force ace_interaction_disableNegativeRating = false;
+force ace_interaction_disableNegativeRating = true;
 /* Allows team management through ACE interaction options. */
 force ace_interaction_enableTeamManagement = true;
 /* Allows the team leader to change the name of their group through an ACE interaction option. */
@@ -465,6 +469,8 @@ force ace_medical_treatment_allowSharedEquipment = 0;
  * 2 - After bandaging
  */
 force ace_medical_treatment_clearTrauma = 1;
+/* Multipler on bandage efftiveness. */
+force ace_medical_treatment_bandageEffectiveness = 9999;
 /* Whether PAKs are used up. */
 force ace_medical_treatment_consumePAK = 1;
 /*
@@ -778,7 +784,7 @@ force acex_headless_endMission = 2;
 /* Produce log messages fro the headless clients. */
 force acex_headless_log = false;
 /* Whether to fiddle with the loadouts if they appear broken: 0: no, 1: yes */
-force acex_headless_transferLoadout = 1;
+force acex_headless_transferLoadout = 0;
 
 /* ACEX Sitting */
 /* Whether sit interaction is placed on chairs. */
@@ -850,7 +856,9 @@ force arc_dif_main_useAISteeringComponent = true;
 
 // Death And Hit reactions
 /* Whether to perform player hit reactions. */
+/* Hit reaction was removed, it's probably not coming back, but just in case this remains in eternal vigil.
 force WBK_deathAnimMod_Hit_PLR = false;
+*/
 
 // VET Unflipping
 force vet_unflipping_unit_mass_limit = 1000;
@@ -1012,7 +1020,7 @@ force tsp_cba_animate_dynamicReadyFriend = 2;
 force tsp_cba_animate_dynamicReadyFriendAngle = 35;
 force tsp_cba_animate_dynamicReadyObject = 1;
 force tsp_cba_animate_friendsAreObjects = false;
-force tsp_cba_animate_map = true;
+//force tsp_cba_animate_map = true;
 force tsp_cba_animate_nvg = true;
 force tsp_cba_animate_walk = false;
 

@@ -8,13 +8,13 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "arc_cfg_main",
-            "us_military_units",
+            "OFrP_A3_AANF1",
+            "OFrP_A3_Weapons"
         };
         author = ARC_AUTHOR;
         VERSION_CONFIG;
     };
 };
 
-#include "CfgGroups.hpp"
-#include "CfgVehicles.hpp"
+#include "CfgMagazineWells.hpp"
 #include "CfgWeapons.hpp"
