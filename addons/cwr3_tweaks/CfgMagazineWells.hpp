@@ -41,6 +41,14 @@ class CfgMagazineWells {
         CWR3_Magazines[] = {"cwr3_30rnd_m16_m","cwr3_20rnd_m16_m"};
     };
 
+    class CBA_556x45_STANAG_2D {
+        CWR3_Magazines[] = {"cwr3_100rnd_m16_m"};
+    };
+
+    class CBA_556x45_STANAG_2D_XL {
+        CWR3_Magazines[] = {"cwr3_100rnd_m16_m"};
+    };
+
     class CBA_556x45_STEYR {
         CWR3_Magazines[] = {"cwr3_30rnd_steyr_m"};
     };
@@ -69,8 +77,12 @@ class CfgMagazineWells {
         CWR3_Magazines[] = {"cwr3_5rnd_m24_m"};
     };
 
+    class CBA_762x51_FAL {
+        CWR3_Magazines[] = {"cwr3_20rnd_fal_m"};
+    };
+
     class CBA_762x51_FAL_L {
-        CWR3_Magazines[] = {"cwr3_30rnd_762x51_bren_m"};
+        CWR3_Magazines[] = {"cwr3_20rnd_fal_m","cwr3_30rnd_762x51_bren_m"};
     };
 
     class CBA_762x51_G3 {
@@ -113,8 +125,8 @@ class CfgMagazineWells {
         CWR3_Magazines[] = {"cwr3_17rnd_glock17_m"};
     };
 
-    class CBA_9x19_PP19 {
-        CWR3_Magazines[] = {"cwr3_64rnd_bizon_m"};
+    class CBA_9x19_HiPower {
+        CWR3_Magazines[] = {"cwr3_13rnd_hipower_m"};
     };
 
     class CBA_9x19_M9 {
@@ -123,6 +135,10 @@ class CfgMagazineWells {
 
     class CBA_9x19_MP5 {
         CWR3_Magazines[] = {"cwr3_30rnd_mp5_m"};
+    };
+
+    class CBA_9x19_PP19 {
+        CWR3_Magazines[] = {"cwr3_64rnd_bizon_m"};
     };
 
     class CBA_9x19_Sterling {
