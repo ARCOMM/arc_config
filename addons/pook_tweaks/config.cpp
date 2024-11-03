@@ -6,7 +6,11 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = { "arc_cfg_main" };
+        requiredAddons[] = {
+            "arc_cfg_main",
+            "pook_GL_c",
+            "pook_H13"
+        };
         author = ARC_AUTHOR;
         VERSION_CONFIG;
     };
