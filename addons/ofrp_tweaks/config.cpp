@@ -8,21 +8,13 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "arc_cfg_main",
-            "arc_cfg_a3_tweaks",
-            "cup_weapons_loadorder",
+            "OFrP_A3_AANF1",
+            "OFrP_A3_Weapons"
         };
         author = ARC_AUTHOR;
         VERSION_CONFIG;
     };
 };
 
-#include "CfgMagazines.hpp"
+#include "CfgMagazineWells.hpp"
 #include "CfgWeapons.hpp"
-
-// Remove FWA function that wraps/unwraps belts.
-class RscInGameUI {
-    class RscWeaponZeroing;
-    class sp_fwa_machinegun_animation: RscWeaponZeroing {
-        onLoad = ""; //onLoad = "_this call Spearpoint_fnc_machinegunrested;";
-    };
-};
