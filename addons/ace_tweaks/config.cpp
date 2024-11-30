@@ -9,7 +9,7 @@ class CfgPatches {
         requiredAddons[] = {
             "arc_cfg_main",
             "ace_minedetector",
-			"ace_medical_treatment",
+            "ace_medical_treatment"
         };
         author = ARC_AUTHOR;
         VERSION_CONFIG;
