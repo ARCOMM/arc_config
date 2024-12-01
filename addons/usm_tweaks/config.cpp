@@ -8,7 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "arc_cfg_main",
-            "us_military_units",
+            "us_military_units"
         };
         author = ARC_AUTHOR;
         VERSION_CONFIG;

@@ -10,7 +10,7 @@ class CfgPatches {
             "arc_cfg_main",
             "A3_Data_F_Enoch_Loadorder",
             "A3_Data_F_Mod_Loadorder",
-			"A3_Data_F_Warlords_Loadorder",
+            "A3_Data_F_Warlords_Loadorder"
         };
         author = ARC_AUTHOR;
         VERSION_CONFIG;
