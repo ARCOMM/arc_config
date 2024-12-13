@@ -23,6 +23,8 @@ class CfgPatches {
         };
         author = ARC_AUTHOR;
         VERSION_CONFIG;
+
+        skipWhenMissingDependencies = 1;
     };
 };
 
