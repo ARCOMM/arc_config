@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class cba_settings_userconfig {
-        name = CSTRING(component);
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
