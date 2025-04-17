@@ -9,6 +9,10 @@ class CfgPatches {
         requiredAddons[] = {
             "arc_cfg_main",
             "arc_cfg_a3_tweaks",
+            "sp_fwa_weapon_base",
+            "sp_fwa_garand",
+            "sp_fwa_machinegun_core",
+            "sp_fwa_Sterling",
             "cup_weapons_loadorder"
         };
         author = ARC_AUTHOR;
