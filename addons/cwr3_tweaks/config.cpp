@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        name = CSTRING(component);
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {
             "cwr3_b_vest_pasgt_oliveDrab",
