@@ -1,17 +1,24 @@
 class CfgWeapons {
-	class LMG_Zafir_F;
-	class sp_fwa_machinegun_base : LMG_Zafir_F {
-		class LinkedItems
-		{
-			class LinkedItemsMuzzle
-			{
-				slot = "PointerSlot";
-				item = "sp_fwa_acc_machinegun_linkhide";
-			};
-		};
-	};
+    class LMG_Zafir_F;
+    class sp_fwa_machinegun_base : LMG_Zafir_F {
+        class LinkedItems
+        {
+            class LinkedItemsMuzzle
+            {
+                slot = "PointerSlot";
+                item = "sp_fwa_acc_machinegun_linkhide";
+            };
+        };
+    };
 
     class sp_fwa_rifle_base;
+    
+    class sp_fwa_rifle_762_base;
+
+    class sp_fwa_garand_base : sp_fwa_rifle_762_base {
+        reloadAction = "CUP_GestureReloadSKS";
+        reloadMagazineSound[] = {"\cup\weapons\CUP_Weapons_SKS\sfx\Reload.wss",1,1,35};
+    };
 
     class sp_fwa_smg_9mm_base : sp_fwa_rifle_base {
         ace_overheating_closedBolt = 0;
