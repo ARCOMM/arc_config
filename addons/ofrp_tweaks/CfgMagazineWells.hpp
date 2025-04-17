@@ -51,7 +51,7 @@ class CfgMagazineWells {
         };
     };
 
-    class CBA_50BMG_PMG_Hecate_II {
+    class CBA_50BMG_PGM_Hecate_II {
         OFrP_Magazines[] = {
             "OFrP_7Rnd_127x99",
             "OFrP_7Rnd_127x99_APEI"
