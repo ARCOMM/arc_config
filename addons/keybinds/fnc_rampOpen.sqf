@@ -15,7 +15,7 @@ Author:
     drofseh
 ---------------------------------------------------------------------------- */
 params [["_vehicle", vehicle player]];
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle >> "UserActions" >> "Ramp_Open";
+private _config = configOf _vehicle >> "UserActions" >> "Ramp_Open";
 
 if (_vehicle != player && {isClass (_config)} && {_vehicle call FUNC(playerHasAccessToLights)}) then {
     if !(local _vehicle) exitWith {
@@ -26,4 +26,3 @@ if (_vehicle != player && {isClass (_config)} && {_vehicle call FUNC(playerHasAc
     };
     
 };
-

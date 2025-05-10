@@ -15,10 +15,10 @@ Author:
     drofseh
 ---------------------------------------------------------------------------- */
 params [["_vehicle", vehicle player]];
-private _configOpen = configFile >> "CfgVehicles" >> typeOf _vehicle >> "UserActions" >> "Ramp_Open";
+private _configOpen = configOf _vehicle >> "UserActions" >> "Ramp_Open";
 
 if (_vehicle != player && {isClass (_configOpen)} && {_vehicle call FUNC(playerHasAccessToLights)}) then {
-    private _configClose = configFile >> "CfgVehicles" >> typeOf _vehicle >> "UserActions" >> "Ramp_Close";
+    private _configClose = configOf _vehicle >> "UserActions" >> "Ramp_Close";
 
     if (!isClass (_configClose)) exitWith {};
     if !(local _vehicle) exitWith {
@@ -31,4 +31,3 @@ if (_vehicle != player && {isClass (_configOpen)} && {_vehicle call FUNC(playerH
         _vehicle call FUNC(rampOpen)
     };
 };
-
