@@ -13,6 +13,7 @@ class cfgFunctions {
             PATHTO_FNC(turnMasterLightsOn);
             PATHTO_FNC(toggleRamp);
             PATHTO_FNC(rampOpen);
+            PATHTO_FNC(rampLevel);
             PATHTO_FNC(rampClose);
         };
     };
