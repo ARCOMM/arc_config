@@ -6,7 +6,7 @@ Description:
     Toggle master light switch on or off, restricting or allowing other lights to fuction
 
 Parameters:
-    none
+    0: The vehicle the player is in. <OBJECT> (default: vehicle ace_player)
 
 Returns:
     Nothing

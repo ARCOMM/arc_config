@@ -6,10 +6,10 @@ Description:
     Toggle collision lights on or off
 
 Parameters:
-    none
+    0: The vehicle the player is in. <OBJECT> (default: vehicle ace_player)
 
 Returns:
-    Nothing
+    0: True if player is the driver, pilot, or copilot <BOOL>
 
 Author:
     drofseh

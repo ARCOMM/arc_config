@@ -6,7 +6,7 @@ Description:
     Turns engine on
 
 Parameters:
-    none
+    0: The vehicle the player is in. <OBJECT> (default: vehicle ace_player)
 
 Returns:
     Nothing
