@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 /* ----------------------------------------------------------------------------
-Internal Function: arc_cfg_keybinds_fnc_toggleMainLights
+Internal Function: arc_cfg_keybinds_fnc_turnEngineOff
 
 Description:
-    Toggle main lights on or off
+    Turns engine off
 
 Parameters:
     none
@@ -18,10 +18,7 @@ params [["_vehicle", vehicle ace_player]];
 
 if (_vehicle != ace_player && {_vehicle call FUNC(playerHasAccessToControls)}) then {
     if !(local _vehicle) exitWith {
-        [_vehicle] remoteExecCall [QUOTE(FUNC(toggleMainLights)), _vehicle];
+        [_vehicle] remoteExecCall [QUOTE(FUNC(turnEngineOff)), _vehicle];
     };
-    if (_vehicle getVariable ["arc_cfg_keybinds_MainLightsOn", false]) exitWith {
-        _vehicle call FUNC(turnMainLightsOff)
-    };
-    _vehicle call FUNC(turnMainLightsOn)
+    _vehicle engineOn false;
 };

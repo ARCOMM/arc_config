@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /* ----------------------------------------------------------------------------
-Internal Function: arc_cfg_keybinds_fnc_playerHasAccessToLights
+Internal Function: arc_cfg_keybinds_fnc_playerHasAccessToControls
 
 Description:
     Toggle collision lights on or off
@@ -14,6 +14,6 @@ Returns:
 Author:
     drofseh
 ---------------------------------------------------------------------------- */
-params [["_vehicle", vehicle player]];
+params [["_vehicle", vehicle ace_player]];
 
-driver _vehicle == player || {currentPilot _vehicle == player} || {getNumber ([_vehicle, _vehicle unitTurret player] call CBA_fnc_getTurret >> "isCopilot") == 1}
+driver _vehicle == ace_player || {currentPilot _vehicle == ace_player} || {getNumber ([_vehicle, _vehicle unitTurret ace_player] call CBA_fnc_getTurret >> "isCopilot") == 1}

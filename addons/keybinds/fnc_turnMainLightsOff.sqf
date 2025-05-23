@@ -14,9 +14,9 @@ Returns:
 Author:
     drofseh
 ---------------------------------------------------------------------------- */
-params [["_vehicle", vehicle player]];
+params [["_vehicle", vehicle ace_player]];
 
-if (_vehicle != player && {_vehicle call FUNC(playerHasAccessToLights)}) then {
+if (_vehicle != ace_player && {_vehicle call FUNC(playerHasAccessToControls)}) then {
     if !(local _vehicle) exitWith {
         [_vehicle] remoteExecCall [QUOTE(FUNC(turnMainLightsOff)), _vehicle];
     };

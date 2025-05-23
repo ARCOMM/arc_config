@@ -1,6 +1,8 @@
 class UserActionGroups {
     class Common {
         group[] += {
+            QGVAR(turnEngineOn),
+            QGVAR(turnEngineOff),
             QGVAR(toggleMasterLights),
             QGVAR(turnMasterLightsOn),
             QGVAR(turnMasterLightsOff),

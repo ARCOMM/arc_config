@@ -1,7 +1,7 @@
 class cfgFunctions {
     class ADDON {
         class functions {
-            PATHTO_FNC(playerHasAccessToLights);
+            PATHTO_FNC(playerHasAccessToControls);
             PATHTO_FNC(toggleCollisionLights);
             PATHTO_FNC(toggleMainLights);
             PATHTO_FNC(toggleMasterLights);

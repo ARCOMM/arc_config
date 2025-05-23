@@ -14,9 +14,9 @@ Returns:
 Author:
     drofseh
 ---------------------------------------------------------------------------- */
-params [["_vehicle", vehicle player]];
+params [["_vehicle", vehicle ace_player]];
 
-if (_vehicle != player && {_vehicle call FUNC(playerHasAccessToLights)}) then {
+if (_vehicle != ace_player && {_vehicle call FUNC(playerHasAccessToControls)}) then {
     if !(_vehicle getVariable ["arc_cfg_keybinds_MasterLightsOn", false]) exitWith {
         _vehicle setVariable ["arc_cfg_keybinds_MainLightsOn", true, true];
     };
