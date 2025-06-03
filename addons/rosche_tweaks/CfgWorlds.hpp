@@ -11,4 +11,4 @@ class CfgWorlds {
             offsetY = 15360;
         };
     };
-} ;
+};
