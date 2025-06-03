@@ -165,6 +165,8 @@ force ace_explosives_explodeOnDefuse = false;
 force ace_explosives_punishNonSpecialists = true;
 /* Whether specialists are required to defuse explosives. */
 force ace_explosives_requireSpecialist = false;
+/* Set the max explosives timer. */
+force ace_explosives_customTimerMax = 1800;
 
 /* ACE Fragmentation Simulation */
 /* Enables the whole system. */
@@ -1020,7 +1022,9 @@ force tsp_cba_animate_dynamicReadyFriend = 2;
 force tsp_cba_animate_dynamicReadyFriendAngle = 35;
 force tsp_cba_animate_dynamicReadyObject = 1;
 force tsp_cba_animate_friendsAreObjects = false;
-//force tsp_cba_animate_map = true;
+/* These two can only be changed here or by mission maker, never individual client. */
+force force tsp_cba_animate_map = false;
+force force tsp_cba_sound_map = false;
 force tsp_cba_animate_nvg = true;
 force tsp_cba_animate_walk = false;
 

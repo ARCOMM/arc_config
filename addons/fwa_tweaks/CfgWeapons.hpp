@@ -11,6 +11,13 @@ class CfgWeapons {
     };
 
     class sp_fwa_rifle_base;
+    
+    class sp_fwa_rifle_762_base;
+
+    class sp_fwa_garand_base : sp_fwa_rifle_762_base {
+        reloadAction = "CUP_GestureReloadSKS";
+        reloadMagazineSound[] = {"\cup\weapons\CUP_Weapons_SKS\sfx\Reload.wss",1,1,35};
+    };
 
     class sp_fwa_rifle_762_base;
     class sp_fwa_bren_base : sp_fwa_rifle_762_base {

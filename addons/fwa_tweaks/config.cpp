@@ -2,17 +2,23 @@
 
 class CfgPatches {
     class ADDON {
-        name = CSTRING(component);
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "arc_cfg_main",
             "arc_cfg_a3_tweaks",
-            "cup_weapons_loadorder",
+            "sp_fwa_weapon_base",
+            "sp_fwa_garand",
+            "sp_fwa_machinegun_core",
+            "sp_fwa_Sterling",
+            "cup_weapons_loadorder"
         };
         author = ARC_AUTHOR;
         VERSION_CONFIG;
+
+        skipWhenMissingDependencies = 1;
     };
 };
 

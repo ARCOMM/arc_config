@@ -9,7 +9,7 @@ include = [
 ]
 
 [version]
-git_hash = 0
+git_hash = 8
 
 [hemtt.config]
 preset = "Hemtt"

@@ -1,0 +1,4 @@
+#define COMPONENT bwa3_tweaks
+#define COMPONENT_BEAUTIFIED BWA3 Tweaks
+#include "\z\arc_cfg\addons\main\script_mod.hpp"
+#include "\z\arc_cfg\addons\main\script_macros.hpp"

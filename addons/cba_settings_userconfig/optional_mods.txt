@@ -129,3 +129,7 @@ DynaSound_DS_w_Sting
 DynaSound_DS_w_Alamut
 DynaSound_DS_w_ASRAAM
 DynaSound_DS_w_DAGR
+jsrs_soundmod_2025_soundfiles
+jsrs_soundmod_2025_Beta
+jsrs_soundmod_2025_Beta_cup_weapons
+jsrs_soundmod_2025_Beta_cup_vehicles
