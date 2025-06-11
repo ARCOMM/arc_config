@@ -208,8 +208,12 @@ force ace_goggles_showClearGlasses = true;
 force ace_grenades_convertExplosives = true;
 
 /* ACE Hearing */
-/* Automatically add earplugs to units that have a "big rifle". */
-force ace_hearing_autoAddEarplugsToUnits = false;
+/* Automatically add earplugs to units:
+ * 0 - Add to no one.
+ * 1 - Add to units with a rocket launcher.
+ * 2 - Add to all units.
+ */
+force ace_hearing_autoAddEarplugsToUnits = 0;
 /* Enables ear ringing sound effect. */
 force ace_hearing_disableEarRinging = true;
 /* The volume earplugs lower hearing to. 0-1 */
@@ -283,10 +287,10 @@ force ace_repair_engineerSetting_wheel = 0;
  * 3       - Near repair vehicle or facility.
  */
 force ace_repair_fullRepairLocation = 3;
-/* Items required for a full repair. */
-force ace_repair_fullRepairRequiredItems = ["ToolKit"];
-/* Items required for any other repair. */
-force ace_repair_miscRepairRequiredItems = ["ToolKit"];
+/* Specifies whether you need a toolkit for a full repair. */
+force ace_repair_fullRepairRequiredItems = 1;
+/* Specifies whether you need a toolkit to repair. */
+force ace_repair_miscRepairRequiredItems = 1;
 /* Tools required to repair a wheel, other than the wheel itself. */
 force ace_repair_wheelRepairRequiredItems = [];
 /* The minimum damage anyone can repair a part to. */
@@ -431,8 +435,13 @@ force ace_medical_statemachine_fatalInjuriesPlayer = 0;
  * 2 - Bandages are special and wounds reopen until stitched.
  */
 force ace_medical_treatment_advancedBandages = 2;
-/* Enables a player to get pulse, blood presure and response. When false CPR is only available when the target is in cardiac arrest. */
-force ace_medical_treatment_advancedDiagnose = true;
+/* Customises which diagnosis is available.
+ * 0 - Basic diagnosis.
+ * 1 - Advanced diagnosis.
+ * 2 - As above, but can diagnose cardiac arrest.
+ * 3 - As above, but can diagnose cardiac arrest directly (if the person is dead?).
+ */
+force ace_medical_treatment_advancedDiagnose = 2;
 /* Enables the more complete drug system. Also enables Adenosine. */
 force ace_medical_treatment_advancedMedication = true;
 /* Allows unconscious units to be body bagged. */
@@ -471,8 +480,8 @@ force ace_medical_treatment_allowSharedEquipment = 0;
  * 2 - After bandaging
  */
 force ace_medical_treatment_clearTrauma = 1;
-/* Multipler on bandage efftiveness. */
-force ace_medical_treatment_bandageEffectiveness = 9999;
+/* Multipler on bandage effectiveness, from 0 to 5. */
+force ace_medical_treatment_bandageEffectiveness = 5;
 /* Whether PAKs are used up. */
 force ace_medical_treatment_consumePAK = 1;
 /*
@@ -521,6 +530,12 @@ force ace_medical_treatment_medicEpinephrine = 0;
 force ace_medical_treatment_medicIV = 1;
 force ace_medical_treatment_medicPAK = 1;
 force ace_medical_treatment_medicSurgicalKit = 1;
+/* Which units get access to numerical pulse readings:
+ * 0 - Everyone
+ * 1 - Medics
+ * 2 - Doctos
+ */
+force ace_medical_treatment_numericalPulse = 1;
 /* Multiplier on the PAK treatment time. */
 force ace_medical_treatment_timeCoefficientPAK = 1;
 /*
