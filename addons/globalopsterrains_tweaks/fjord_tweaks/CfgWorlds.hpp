@@ -5,10 +5,10 @@ class CfgWorlds {
         class Grid;
     };
 
-    class WL_Rosche : CAWorld {
+    class go_map_fjord : CAWorld {
         class Grid : Grid {
             offsetX = 0;
-            offsetY = 15360;
+            offsetY = 14336;
         };
     };
 };
