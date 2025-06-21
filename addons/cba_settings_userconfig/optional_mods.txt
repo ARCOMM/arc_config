@@ -133,3 +133,5 @@ jsrs_soundmod_2025_soundfiles
 jsrs_soundmod_2025_Beta
 jsrs_soundmod_2025_Beta_cup_weapons
 jsrs_soundmod_2025_Beta_cup_vehicles
+Flex_CUP_PLA_Weapons_JSRSPatch
+Flex_CUP_PLA_Weapons_Rifles_QBZ95_JSRSPatch
