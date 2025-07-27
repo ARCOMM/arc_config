@@ -7,7 +7,7 @@ class ace_medical_treatment {
             hrIncreaseLow[] = {0, 0};    //changed from {-5, -10}
             hrIncreaseNormal[] = {0, 0}; //changed from {-5, -15}
             maxDose = 25;                //changed from 5
-            painReduce = 0.1;            //changed from 0.35, 0.1 may still high; morphine is 0.8
+            painReduce = 0.1;            //changed from 0.35, 0.1 may still be too high; morphine is 0.8
             timeInSystem = 1200;         //changed from 420
         };
     };
