@@ -4,7 +4,7 @@
  * Author: TinfoilHate, BlackhawkPL, Drofseh
  *
  * Gets the displayName of the given magazine.
- * [] call arc_config_shot_counter_getDisplayName;
+ * ["magazine"] call arc_cfg_shot_counter_getDisplayName;
  *
  * Arguments:
  * 0: Magazine Classname <STRING>

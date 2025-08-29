@@ -4,7 +4,7 @@
  * Author: TinfoilHate, BlackhawkPL, Drofseh
  *
  * Increments the number of shots fired by the side/magazine
- * [] call arc_config_shot_counter_shotCount;
+ * [] call arc_cfg_shot_counter_shotCount;
  *
  * Arguments:
  * 0: A side <SIDE>

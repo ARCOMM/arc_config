@@ -7,6 +7,9 @@ mainprefix = "z"
 include = [
     "logo_arc_ca.paa"
 ]
+exclude = [
+    ".inc.sqf",
+]
 
 [version]
 git_hash = 8

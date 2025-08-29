@@ -2,7 +2,7 @@
 
 if (isServer) then {
     ["All", "init", {
-        params ["_object"]
+        params ["_object"];
         if !(_object getVariable [QGVAR(added_shotCount),false]) then {
             [QGVAR(event_addEH), _object] call CBA_fnc_serverEvent;
             _object setVariable [QGVAR(added_shotCount),true];

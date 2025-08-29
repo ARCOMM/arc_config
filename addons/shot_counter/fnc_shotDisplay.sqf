@@ -4,7 +4,7 @@
  * Author: TinfoilHate, BlackhawkPL, Drofseh
  *
  * Builds the 
- * [] call arc_config_shot_counter_shotDisplay;
+ * [] call arc_cfg_shot_counter_shotDisplay;
  *
  * Arguments:
  * 0: A side <SIDE>

@@ -4,7 +4,7 @@
  * Author: TinfoilHate, BlackhawkPL, Drofseh
  *
  * Adds the fired eventhandler to an object.
- * _unit call arc_config_shot_counter_addEH;
+ * _unit call arc_cfg_shot_counter_addEH;
  *
  * Arguments:
  * 0: Unit or vehicle <OBJECT>
