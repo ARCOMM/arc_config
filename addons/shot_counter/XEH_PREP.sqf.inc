@@ -4,7 +4,7 @@ PREP(getDisplayName);
 PREP(shotCount);
 PREP(shotDisplay);
 
-if (isServer) exitW {
+if (isServer) then {
     aCount_west_ExpendedAmmunition = ["Total",0];
     aCount_resistance_ExpendedAmmunition = ["Total",0];
     aCount_east_ExpendedAmmunition = ["Total",0];
