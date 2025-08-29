@@ -17,7 +17,7 @@
 
 params ["_object"];
 
-if (_object isKindOf "Man") exitWith {
+if (_object isKindOf "CAManBase") exitWith {
     _object addEventHandler ["Fired", {
         params ["", "", "", "", "", "_magazine", "", "_gunner"];
         [side group _gunner, _magazine call FUNC(getDisplayName)] call FUNC(shotCount);
