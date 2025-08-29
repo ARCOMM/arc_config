@@ -5,7 +5,7 @@ _obj = param [0];
 _obj setVariable ["aCount_originalSide",(_obj call Olsen_FW_FNC_getOriginalSide),false];
 
 if (_obj isKindOf "Man") then {
-    _obj addEventHandler ["fired", {
+    _obj addEventHandler ["Fired", {
         params ["", "", "", "", "", "_magazine", "", "_gunner"];
         [(_gunner call Olsen_FW_FNC_getOriginalSide),_magazine call aCount_getDisplayName] call aCount_shotCount;
     }];
@@ -23,7 +23,7 @@ if (
         } forEach crew _obj;
     };
 
-    _obj addEventHandler ["fired", {
+    _obj addEventHandler ["Fired", {
         params ["", "", "", "", "", "_magazine", "", "_gunner"];
         [(_gunner call Olsen_FW_FNC_getOriginalSide),_magazine call aCount_getDisplayName] call aCount_shotCount;
     }];
