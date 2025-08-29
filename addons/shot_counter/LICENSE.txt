@@ -1,4 +1,4 @@
-﻿This licence is applicable only to the files of the folder in which it is found.
+This licence is applicable only to the files of the folder in which it is found.
 Other files in other folders may be under a different licence, or no licence.
 
 MIT License
