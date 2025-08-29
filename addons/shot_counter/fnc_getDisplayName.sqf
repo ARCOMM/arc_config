@@ -1,25 +1,36 @@
-// aCount_getDisplayName
-// FUNC(getDisplayName)
+#include "script_component.hpp"
 
-private ["_className","_displayName","_foundClass","_ret"];
-_className = _this;
-_ret = "Error";
-_foundClass = aCount_classNames find _className;
+/*
+ * Author: TinfoilHate, BlackhawkPL, Drofseh
+ *
+ * Gets the displayName of the given magazine.
+ * [] call arc_config_shot_counter_getDisplayName;
+ *
+ * Arguments:
+ * 0: Magazine Classname <STRING>
+ *
+ * Return Value:
+ * Magazine config's displayName <STRING>
+ *
+ * Public: No
+ */
+
+params ["_magazine"];
+private _displayName = "Error";
+private _foundClass = GVAR(magazines) find _magazine;
 
 if (_foundClass < 0) then {
-    _cfgMag = (configFile >> "CfgMagazines" >> _className);
-    _ret =  getText(_cfgMag >> "displayName");
+    _displayName =  getText(configFile >> "CfgMagazines" >> _magazine >> "displayName");
 
-    if (_ret isEqualTo "") then {
-        _ret = (str _className);
-        diag_log text (format ["displayName entry is blank for %1",_ret]);
+    if (_displayName isEqualTo "") then {
+        _displayName = (str _magazine);
+        diag_log text (format ["displayName entry is blank for %1",_displayName]);
     };
 
-    aCount_classNames pushBack _className;
-    aCount_classNames pushBack _ret;
-
+    GVAR(magazines) pushBack _magazine;
+    GVAR(magazines) pushBack _displayName;
 } else {
-    _ret = aCount_classNames select( _foundClass + 1);
+    _displayName = GVAR(magazines) select(_foundClass + 1);
 };
 
-_ret
+_displayName

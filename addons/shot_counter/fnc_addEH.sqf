@@ -1,31 +1,35 @@
-// aCount_addEH
-// FUNC(addEH)
+#include "script_component.hpp"
 
-_obj = param [0];
-_obj setVariable ["aCount_originalSide",(_obj call Olsen_FW_FNC_getOriginalSide),false];
+/*
+ * Author: TinfoilHate, BlackhawkPL, Drofseh
+ *
+ * Adds the fired eventhandler to an object.
+ * _unit call arc_config_shot_counter_addEH;
+ *
+ * Arguments:
+ * 0: Unit or vehicle <OBJECT>
+ *
+ * Return Value:
+ * Nothing
+ *
+ * Public: No
+ */
 
-if (_obj isKindOf "Man") then {
-    _obj addEventHandler ["Fired", {
+params ["_object"];
+
+if (_object isKindOf "Man") exitWith {
+    _object addEventHandler ["Fired", {
         params ["", "", "", "", "", "_magazine", "", "_gunner"];
-        [(_gunner call Olsen_FW_FNC_getOriginalSide),_magazine call aCount_getDisplayName] call aCount_shotCount;
+        [side group _gunner, _magazine call FUNC(getDisplayName)] call FUNC(shotCount);
     }];
-
-    _obj setVariable ["aCount_firedEh", true, false];
 };
 
-if (
-    (_obj isKindOf "Land" && {!(_obj isKindOf "Man")})
-    || {_obj isKindOf "Air" || {_obj isKindOf "Ship"}}
+if (_object isKindOf "Land"
+    || {_object isKindOf "Air"}
+    || {_object isKindOf "Ship"}
 ) then {
-    if (count crew _obj > 0) then { {
-            _x setVariable ["aCount_firedEh", true, false];
-            _x setVariable ["aCount_originalSide",(_obj call Olsen_FW_FNC_getOriginalSide),false];
-        } forEach crew _obj;
-    };
-
-    _obj addEventHandler ["Fired", {
+    _object addEventHandler ["Fired", {
         params ["", "", "", "", "", "_magazine", "", "_gunner"];
-        [(_gunner call Olsen_FW_FNC_getOriginalSide),_magazine call aCount_getDisplayName] call aCount_shotCount;
+        [side group _gunner, _magazine call FUNC(getDisplayName)] call FUNC(shotCount);
     }];
-    _obj setVariable ["aCount_firedEh", true, false];
 };

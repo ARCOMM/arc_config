@@ -1,10 +1,10 @@
 
 class shot_Count_Teams {
     title = "Munitions Expended by Teams";
-    variable = "aCount_textTeams";
+    variable = QGVAR(countTextTeams);
 };
 
 class shot_Count_Player {
     title = "Munitions Expended by You";
-    variable = "aCount_textPlayer";
+    variable = QGVAR(countTextPlayer);
 };

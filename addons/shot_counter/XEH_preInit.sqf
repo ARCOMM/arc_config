@@ -1,2 +1,2 @@
 #include "script_component.hpp"
-#include "XEH_PREP.sqf.inc"
+#include "XEH_PREP.inc.sqf"
