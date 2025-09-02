@@ -3,16 +3,16 @@
 if (isServer) then {
     ["All", "init", {
         params ["_object"];
-        if !(_object getVariable [QGVAR(added_shotCount),false]) then {
+        if !(_object getVariable [QGVAR(added_shotCount), false]) then {
             [QGVAR(event_addEH), _object] call CBA_fnc_serverEvent;
-            _object setVariable [QGVAR(added_shotCount),true];
+            _object setVariable [QGVAR(added_shotCount), true];
         };
     }] call CBA_fnc_addClassEventHandler;
 
     [{ CBA_missionTime > 0 }, {
         {
-            if !(_x getVariable [QGVAR(added_shotCount),false]) then {
-                _x setVariable [QGVAR(added_shotCount),true];
+            if !(_x getVariable [QGVAR(added_shotCount), false]) then {
+                _x setVariable [QGVAR(added_shotCount), true];
                 _x call FUNC(addEH);
             };
         } forEach allMissionObjects "All";
@@ -21,8 +21,8 @@ if (isServer) then {
 
 if (hasInterface) then {
     if (didJIP) then {
-        if !(player getVariable [QGVAR(added_shotCount),false]) then {
-            player setVariable [QGVAR(added_shotCount),true];
+        if !(player getVariable [QGVAR(added_shotCount), false]) then {
+            player setVariable [QGVAR(added_shotCount), true];
             [QGVAR(event_addEH), player] call CBA_fnc_serverEvent;
         };
     };

@@ -24,7 +24,7 @@ if (_foundClass < 0) then {
 
     if (_displayName isEqualTo "") then {
         _displayName = (str _magazine);
-        diag_log text (format ["displayName entry is blank for %1",_displayName]);
+        diag_log text (format ["displayName entry is blank for %1", _displayName]);
     };
 
     GVAR(magazines) pushBack _magazine;

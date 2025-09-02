@@ -20,38 +20,38 @@ params ["_side", "_magazineName"];
 
 switch (_side) do {
     case west: {
-        GVAR(expendedAmmunitionWest) set [1,(GVAR(expendedAmmunitionWest) select 1) + 1 ];
+        GVAR(expendedAmmunitionWest) set [1, (GVAR(expendedAmmunitionWest) select 1) + 1 ];
         private _found = GVAR(expendedAmmunitionWest) find _magazineName;
 
         if (_found < 0) then {
             GVAR(expendedAmmunitionWest) pushBack _magazineName;
             GVAR(expendedAmmunitionWest) pushBack 1;
         } else {
-            GVAR(expendedAmmunitionWest) set [_found + 1,(GVAR(expendedAmmunitionWest) select _found + 1) + 1 ];
+            GVAR(expendedAmmunitionWest) set [_found + 1, (GVAR(expendedAmmunitionWest) select _found + 1) + 1 ];
         };
     };
 
     case east: {
-        GVAR(expendedAmmunitionEast) set [1,(GVAR(expendedAmmunitionEast) select 1) + 1 ];
+        GVAR(expendedAmmunitionEast) set [1, (GVAR(expendedAmmunitionEast) select 1) + 1 ];
         private _found = GVAR(expendedAmmunitionEast) find _magazineName;
 
         if (_found < 0) then {
             GVAR(expendedAmmunitionEast) pushBack  _magazineName;
             GVAR(expendedAmmunitionEast) pushBack 1;
         } else {
-            GVAR(expendedAmmunitionEast) set [_found + 1,(GVAR(expendedAmmunitionEast) select _found + 1) + 1 ];
+            GVAR(expendedAmmunitionEast) set [_found + 1, (GVAR(expendedAmmunitionEast) select _found + 1) + 1 ];
         };
     };
 
     case resistance: {
-        GVAR(expendedAmmunitionResistance) set [1,(GVAR(expendedAmmunitionResistance) select 1) + 1 ];
+        GVAR(expendedAmmunitionResistance) set [1, (GVAR(expendedAmmunitionResistance) select 1) + 1 ];
         private _found = GVAR(expendedAmmunitionResistance) find _magazineName;
 
         if (_found < 0) then {
             GVAR(expendedAmmunitionResistance) pushBack  _magazineName;
             GVAR(expendedAmmunitionResistance) pushBack 1;
         } else {
-            GVAR(expendedAmmunitionResistance) set [_found + 1,(GVAR(expendedAmmunitionResistance) select _found + 1) + 1 ];
+            GVAR(expendedAmmunitionResistance) set [_found + 1, (GVAR(expendedAmmunitionResistance) select _found + 1) + 1 ];
         };
     };
 };
