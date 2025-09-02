@@ -26,7 +26,7 @@ if (hasInterface) then {
                     GVAR(playerExpendedAmmunition) pushBack _magazineName ;
                     GVAR(playerExpendedAmmunition) pushBack 1;
                 } else {
-                    GVAR(playerExpendedAmmunition) set [_found + 1,(GVAR(playerExpendedAmmunition) select _found + 1) + 1 ];
+                    GVAR(playerExpendedAmmunition) set [_found + 1, (GVAR(playerExpendedAmmunition) select _found + 1) + 1];
                 };
             };
         },
