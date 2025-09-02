@@ -3,7 +3,7 @@
 /*
  * Author: TinfoilHate, BlackhawkPL, Drofseh
  *
- * Builds the 
+ * Builds the text for the debriefing display
  * [] call arc_cfg_shot_counter_shotDisplay;
  *
  * Arguments:
