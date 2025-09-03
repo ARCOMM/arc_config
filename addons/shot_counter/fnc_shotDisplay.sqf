@@ -23,6 +23,10 @@ if ((GVAR(playerExpendedAmmunition) select 1) > 0) then {
     for [{ _i = 0}, {_i < count GVAR(playerExpendedAmmunition)}, {_i = _i + 2}] do {
         GVAR(countTextPlayer) = format ["%1%2: %3 Rounds<br/>", GVAR(countTextPlayer), GVAR(playerExpendedAmmunition) select (_i), GVAR(playerExpendedAmmunition) select (_i + 1)];
     };
+
+    GVAR(countTextPlayer) = format ["%1<br/>%2: %3<br/>", GVAR(countTextPlayer), GVAR(playerHits) select 0, GVAR(playerHits) select 1];
+
+    GVAR(countTextPlayer) = format ["%1<br/>Accuracy: %2%%", GVAR(countTextPlayer), ((GVAR(playerHits) select 1) / (GVAR(playerExpendedAmmunition) select 1)) toFixed 2];
 } else {
     GVAR(countTextPlayer) = format ["%1None", GVAR(countTextPlayer)];
 };

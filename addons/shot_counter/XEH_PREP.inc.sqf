@@ -2,6 +2,7 @@ PREP(addEH);
 PREP(getDisplayName);
 PREP(shotCount);
 PREP(shotDisplay);
+PREP(shotHit);
 
 if (isServer) then {
     GVAR(expendedAmmunitionWest) = ["Total", 0];
@@ -13,6 +14,7 @@ if (isServer) then {
 
 if (hasInterface) then {
     GVAR(playerExpendedAmmunition) = ["Total", 0];
+    GVAR(playerHits) = ["Hits", 0];
 
     ["All", "fired",
         {
@@ -23,7 +25,7 @@ if (hasInterface) then {
                 private _found = GVAR(playerExpendedAmmunition) find _magazineName;
 
                 if (_found < 0) then {
-                    GVAR(playerExpendedAmmunition) pushBack _magazineName ;
+                    GVAR(playerExpendedAmmunition) pushBack _magazineName;
                     GVAR(playerExpendedAmmunition) pushBack 1;
                 } else {
                     GVAR(playerExpendedAmmunition) set [_found + 1, (GVAR(playerExpendedAmmunition) select _found + 1) + 1];
@@ -34,4 +36,17 @@ if (hasInterface) then {
         [],
         true
     ] call CBA_fnc_addClassEventHandler;
+
+    {
+        [_x, "HitPart",
+            {
+                {
+                    _x call FUNC(shotHit);
+                } forEach _this;
+            },
+            true,
+            [],
+            true
+        ] call CBA_fnc_addClassEventHandler;
+    } forEach ["Land", "Air", "Ship"];
 };
