@@ -3,11 +3,12 @@
 // This array assigns vehicles to squads
 // Each assignment should consist of an array that contains the variable name of the group, and the variable name of the vehicle, [SQUAD, VEHICLE].
 // Only one vehicle can be assigned per squad.
-squadVic_List = [];
+// This should be placed in init.sqf
+arc_cfg_squad_vic_list = [];
 
 /*
 Example:
-squadVic_List = [
+arc_cfg_squad_vic_list = [
     [BritSquadHQ, BritTruckHQ],
     [BritSquad10, BritTruck10],
     [BritSquad11, BritTruck11],
@@ -20,3 +21,6 @@ squadVic_List = [
     [BritCrew, BritTank]
 ];
 */
+
+// If you want to disable the system place this in init.sqf
+arc_cfg_squad_vic_enabled = false;
