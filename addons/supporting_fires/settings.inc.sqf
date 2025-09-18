@@ -1,15 +1,50 @@
 
 if (!isServer) exitWith {};
 
-//This module allows radio operators call in mortar or artillery fire missions using the Ace interation menu.
-//The radio operator requires an ACRE AN/PRC-77 radio in their Backpack. Vehicle radios or other portable radios will not work.
+//This module allows players to call in mortar or artillery fire missions using the Ace interation menu.
 //They will be able to call fire missions on up to six pre-sighted targets based on markers placed by the mission maker.
 //Additionally, they will be able to call fire missions on any target that they can see in the middle of their screen.
 
 // Note - No units or objects are required for this module except the radio operator.
 // All other units or objects (mortars, artillery, etc.) are virtual.
 
-//TARGETS
+//===== RADIOS
+    // Which radios are allowed to call in supporting fires.
+    // Default values are the long range radios.
+    // Values must be LOWER case.
+    // Allowed values are:
+    //      "ACRE_BF888S"
+    //      "ACRE_PRC117F"
+    //      "ACRE_PRC148"
+    //      "ACRE_PRC152"
+    //      "ACRE_PRC343"
+    //      "ACRE_PRC77"
+    //      "ACRE_SEM52SL"
+    //      "ACRE_SEM70"
+
+    GVAR(radiosWest) = ["ACRE_PRC117F", "ACRE_PRC148", "ACRE_PRC152", "ACRE_PRC77", "ACRE_SEM70"];
+    GVAR(radiosEast) = ["ACRE_PRC117F", "ACRE_PRC148", "ACRE_PRC152", "ACRE_PRC77", "ACRE_SEM70"];
+    GVAR(radiosGuer) = ["ACRE_PRC117F", "ACRE_PRC148", "ACRE_PRC152", "ACRE_PRC77", "ACRE_SEM70"];
+
+//===== ROLES
+    // Which roles/slots can call in supporting fire.
+    // These are retrieved from the slot name in the slotting screen.
+    // Values must be LOWER case.
+    // If no value is present then only an appropriate radio is required
+    // Example:
+    // GVAR(rolesWest) = ["platoon leader", "platoon sergeant", "forward observer"];
+
+    GVAR(rolesWest) = [];
+    GVAR(rolesEast) = [];
+    GVAR(rolesGuer) = [];
+
+//===== Allow for Group Leader
+    // Always allow the group leader to call in supporting fires, even if they don't have a a role from the list above.
+    GVAR(alwaysAllowGroupLeaderWest) = false;
+    GVAR(alwaysAllowGroupLeaderEast) = false;
+    GVAR(alwaysAllowGroupLeaderGuer) = false;
+
+//===== TARGETS
     // Set pre-sighted targets for each side.
     // Each target MUST be the variable name of a marker you have placed in the mission
     // If you wish to use less than 6 targets, leave the unused targets with an empty string, ei. GVAR(target06) = "";
@@ -52,11 +87,11 @@ if (!isServer) exitWith {};
     GVAR(target05Zeus) = "";
     GVAR(target06Zeus) = "";
 
-//TARGET NAMES
+//===== TARGET NAMES
     // These are now automatically taken from the marker text set in the editor.
     // So make sure you name your markers appropriately.
 
-// BATTERY SIZE
+//=====  BATTERY SIZE
     // Sets, per side, the number of guns in the supporting battery.
     // Higher number means more shells landing per volley.
     // So for a value of 5, if 10 rounds are fired then they will arrive in 2 volleys.
@@ -66,7 +101,7 @@ if (!isServer) exitWith {};
     GVAR(batterySizeGuer) = 5;
     GVAR(batterySizeZeus) = 5;
 
-// AMMUNITION TYPE
+//=====  AMMUNITION TYPE
     // There are three types of ammunition available, High Explosive, Smoke, and Flare.
     // By default these are mortar shells, but you can change the classNames (Type) to some other kind of ammo if desired.
 
@@ -99,7 +134,7 @@ if (!isServer) exitWith {};
     GVAR(shellsSmoke_TypeZeus) = "Smoke_82mm_AMOS_White";
     GVAR(shellsFlare_TypeZeus) = "Flare_82mm_AMOS_White";
 
-// AMMUNITION AMOUNT
+//=====  AMMUNITION AMOUNT
     // This allows you to set the amount of ammunition available to each side.
     // Note that HE and Smoke rounds are always fired in volleys of 5.
     // If fewer than 5 rounds are available for those types then no interaction for that ammo will show up.
@@ -122,7 +157,7 @@ if (!isServer) exitWith {};
     // Zeus
     // Zeus has unlimited ammo
 
-// FIRE MISSION ACCURACY
+//=====  FIRE MISSION ACCURACY
     // Sets, per side, how close to the target the fire mission impact area be in metres, using RNG.
     // Accuracy will always be perfect for Zeus
     // Higher number means less accurate.
@@ -136,7 +171,7 @@ if (!isServer) exitWith {};
     GVAR(shellAccuracyGuer) = 100;
     // Zeus has perfect accuracy
 
-// FIRE MISSION DISPERSION
+//=====  FIRE MISSION DISPERSION
     // Sets, per side, the maximum distance (in metres) a shell can land from the centre of the impact area, using RNG.
     // Higher number means more dispersion.
     // 0 means the shells will all land exactly in the centre.

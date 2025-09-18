@@ -63,22 +63,22 @@ if (!GVAR(isZEUS)) then {
 // make fire missions unavailable for that side
 if (GVAR(isZEUS)) then {
     GVAR(fireMissionAvailableZeus) = false;
-    publicVariable "GVAR(fireMissionAvailableZeus)";
+    publicVariable QGVAR(fireMissionAvailableZeus);
     // systemChat "Fire missions disabled";
 };
 if (GVAR(isWest)) then {
     GVAR(fireMissionAvailableWest) = false;
-    publicVariable "GVAR(fireMissionAvailableWest)";
+    publicVariable QGVAR(fireMissionAvailableWest);
     // systemChat "Fire missions disabled";
 };
 if (GVAR(isEast)) then {
     GVAR(fireMissionAvailableEast) = false;
-    publicVariable "GVAR(fireMissionAvailableEast)";
+    publicVariable QGVAR(fireMissionAvailableEast);
     // systemChat "Fire missions disabled";
 };
 if (GVAR(isGuer)) then {
     GVAR(fireMissionAvailableGuer) = false;
-    publicVariable "GVAR(fireMissionAvailableGuer)";
+    publicVariable QGVAR(fireMissionAvailableGuer);
     // systemChat "Fire missions disabled";
 };
 
@@ -143,22 +143,22 @@ private _completionDelay = round (_layingDelay + (3 * (1 max (GVAR(volumeOfFire)
         // make fire missions available again for the players side
         if (GVAR(isZEUS)) exitWith {
             GVAR(fireMissionAvailableZeus) = true;
-            publicVariable "GVAR(fireMissionAvailableZeus)";
+            publicVariable QGVAR(fireMissionAvailableZeus);
             // systemChat "Fire missions enabled";
         };
         if (GVAR(isWest)) exitWith {
             GVAR(fireMissionAvailableWest) = true;
-            publicVariable "GVAR(fireMissionAvailableWest)";
+            publicVariable QGVAR(fireMissionAvailableWest);
             // systemChat "Fire missions enabled";
         };
         if (GVAR(isEast)) exitWith {
             GVAR(fireMissionAvailableEast) = true;
-            publicVariable "GVAR(fireMissionAvailableEast)";
+            publicVariable QGVAR(fireMissionAvailableEast);
             // systemChat "Fire missions enabled";
         };
         if (GVAR(isGuer)) exitWith {
             GVAR(fireMissionAvailableGuer) = true;
-            publicVariable "GVAR(fireMissionAvailableGuer)";
+            publicVariable QGVAR(fireMissionAvailableGuer);
             // systemChat "Fire missions enabled";
         };
     }, 

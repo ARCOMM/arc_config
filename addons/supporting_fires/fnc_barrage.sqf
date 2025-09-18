@@ -22,7 +22,7 @@ if (!GVAR(isZEUS)) then {
 
 [
     {
-        params ["_targetName"];
+        params ["_targetName", "_timeToImpact"];
 
         [
             [(format ["Shots out on %1.", _targetName])], 
@@ -32,7 +32,7 @@ if (!GVAR(isZEUS)) then {
         ] call CBA_fnc_notify;
         // systemChat "Shots Out";
     }, 
-   _targetName, 
+   [_targetName, _timeToImpact],
    _layingDelay
 ] call CBA_fnc_waitAndExecute;
 

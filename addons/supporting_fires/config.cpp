@@ -14,3 +14,5 @@ class CfgPatches {
 
 #include "gui.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
+#include "ACE_ZeusActions.hpp"

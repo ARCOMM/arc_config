@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 params [
-    "_target", 
+    "_target",
     "_adjust"
 ];
 
@@ -33,8 +33,8 @@ if (_target isEqualTo "TargetLast") then {
     };
    _accuracy = GVAR(shellAccuracy);
 
-    // systemChat ("GVAR(shellDispersion) - " + str GVAR(shellDispersion));
-    // systemChat ("GVAR(shellAccuracy) - " + str GVAR(shellAccuracy));
+    // systemChat (QGVAR(shellDispersion) + " - " + str GVAR(shellDispersion));
+    // systemChat (QGVAR(shellAccuracy) + " - " + str GVAR(shellAccuracy));
     // systemChat ("_accuracy - " + str _accuracy);
 
    _targetX = (supportFire_lastTargetX) +_adjustX + (random [-_accuracy, 0, _accuracy]);
@@ -50,8 +50,8 @@ if (_target isEqualTo "TargetLast") then {
     GVAR(shellAccuracy) = GVAR(originalShellAccuracy);
    _accuracy = GVAR(shellAccuracy);
 
-    // systemChat ("GVAR(shellDispersion) - " + str GVAR(shellDispersion));
-    // systemChat ("GVAR(shellAccuracy) - " + str GVAR(shellAccuracy));
+    // systemChat (QGVAR(shellDispersion) + " - " + str GVAR(shellDispersion));
+    // systemChat (QGVAR(shellAccuracy) + " - " + str GVAR(shellAccuracy));
     // systemChat ("_accuracy - " + str _accuracy);
 
     // gets new target location
@@ -88,7 +88,7 @@ if (_target isEqualTo "TargetLast") then {
     GVAR(previousTarget)Loc = _targetLoc;
     supportFire_repeatFireBonus = 1;
 
-    // systemChat ("GVAR(previousTarget) - " + str GVAR(previousTarget));
+    // systemChat (QGVAR(previousTarget) + " - " + str GVAR(previousTarget));
     // systemChat ("GVAR(previousTarget)Loc - " + str GVAR(previousTarget)Loc);
     // systemChat ("supportFire_repeatFireBonus - " + str supportFire_repeatFireBonus);
 
