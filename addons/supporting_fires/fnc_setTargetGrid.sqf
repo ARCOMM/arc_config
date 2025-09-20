@@ -4,10 +4,7 @@ params [
     "_targetGrid_gridX", 
     "_targetGrid_gridY"
 ];
-/*
-_targetGrid_gridX = (_targetGrid_gridX splitString ".") select 0;
-_targetGrid_gridY = (_targetGrid_gridY splitString ".") select 0;
-*/
+
 if ((count _targetGrid_gridX) != 3 || {(count _targetGrid_gridY) != 3}) exitWith {
     "Target grid format is invalid, please input correct grid format." call CBA_fnc_notify;
 };
@@ -37,7 +34,3 @@ _targetGrid_gridY = (parseNumber _targetGrid_gridY) * 100 + 50;
 
 GVAR(targetGrid) = [_targetGrid_gridX, _targetGrid_gridY, 0];
 GVAR(targetType) = "TargetGrid";
-
-//hint format ["TarX: %1 - Y: %2", _targetGrid_gridX, _targetGrid_gridY];
-//systemChat format ["X: %1 - Y: %2", _targetGrid_gridX, _targetGrid_gridY];
-//systemChat str GVAR(targetGrid);

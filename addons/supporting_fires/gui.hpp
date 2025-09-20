@@ -18,7 +18,7 @@ class GVAR(Grid_Dialog) {
             moving = 1;
             movingEnable = 0;
             x = "SafeZoneX + (720 / 1920) * SafeZoneW";
-            y = "SafeZoneY + (300.000000000001 / 1080) * SafeZoneH";
+            y = "SafeZoneY + (300 / 1080) * SafeZoneH";
             w = "(480 / 1920) * SafeZoneW";
             h = "(345 / 1080) * SafeZoneH";
         };
@@ -27,8 +27,6 @@ class GVAR(Grid_Dialog) {
             colorBackground[] = {0.133333, 0.160784, 0.184314, 0.75};
             colorText[] = {0.741176, 0.172549, 0.172549, 1};
             idc = 999;
-            //moving = 1;
-            //movingEnable = 0;
             style = 2;
             text = "Enter 6 Digit Grid for Target";
             tooltip = "Only 6 digit grids are supported. Other digit grids sizes will fail.\nRemember that a grid reference indicates the whole grid, not just the bottom left corner.\nThis means the target will be the centre of the grid.";
@@ -75,13 +73,12 @@ class GVAR(Grid_Dialog) {
         };
 
         class GVAR(Grid_Target_X) : RscEdit {
+            onLoad = QUOTE(_this call FUNC(ui_Grid_Target_X_onLoad));
             borderSize = 10;
             canModify = 1;
             colorBackground[] = {0.133333, 0.160784, 0.184314, 0.75};
             colorText[] = {0.741176, 0.172549, 0.172549, 1};
             idc = 1002;
-            //onKeyUp = "player setVariable [QQGVAR(Grid_Target_X_Current), (ctrlText 1002)];";
-            onLoad = QUOTE([] call FUNC(onload_Grid_Target_X));
             style = 2;
             text = "";
             tooltip = "Must be 3 digits, include leading zeros if requried.\nOnly numbers are supported. Any letters or special characters will fail.";
@@ -94,13 +91,12 @@ class GVAR(Grid_Dialog) {
             h = "(45 / 1080) * SafeZoneH";
         };
         class GVAR(Grid_Target_Y) : RscEdit {
+            onLoad = QUOTE(_this call FUNC(ui_Grid_Target_Y_onLoad));
             borderSize = 10;
             canModify = 1;
             colorBackground[] = {0.133333, 0.160784, 0.184314, 0.75};
             colorText[] = {0.741176, 0.172549, 0.172549, 1};
             idc = 1003;
-            //onKeyUp = "player setVariable [QQGVAR(Grid_Target_Y_Current), (ctrlText 1003)];";
-            onLoad = QUOTE([] call FUNC(onload_Grid_Target_Y));
             style = 2;
             text = "";
             tooltip = "Must be 3 digits, include leading zeros if requried.\nOnly numbers are supported. Any letters or special characters will fail.";
@@ -114,12 +110,12 @@ class GVAR(Grid_Dialog) {
         };
 
         class GVAR(Grid_Button_Apply) : RscButton {
-            action = QUOTE([] call FUNC(action_Grid_Button_Apply));
+            action = QUOTE([] call FUNC(ui_Grid_Button_Apply_action));
+            onLoad = QUOTE([] call FUNC(ui_Grid_Button_Apply_onLoad));
             borderSize = 0;
             colorBackground[] = {0.133333, 0.160784, 0.184314, 0.75};
             colorText[] = {0.741176, 0.172549, 0.172549, 1};
             idc = 1004;
-            onLoad = QUOTE([] call FUNC(onload_Grid_Button_Apply));
             style = 2;
             text = "Apply";
             tooltip = "Click to apply the entered coordinates to the preview box.";
@@ -135,13 +131,13 @@ class GVAR(Grid_Dialog) {
             borderSize = 10;
             colorBackground[] = {0.133333, 0.160784, 0.184314, 0.75};
             colorText[] = {0.741176, 0.172549, 0.172549, 1};
-            tooltip = "A preview of the currently selected grid.";
-            tooltipColorShade[] = {0.133333, 0.160784, 0.184314, 0.75};
-            tooltipColorBox[] = {0.741176, 0.172549, 0.172549, 1};
-            tooltipColorText[] = {0.741176, 0.172549, 0.172549, 1};
             idc = 1005;
-            text = "";
             style = 2;
+            text = "";
+            tooltip = "A preview of the currently selected grid.";
+            tooltipColorBox[] = {0.741176, 0.172549, 0.172549, 1};
+            tooltipColorShade[] = {0.133333, 0.160784, 0.184314, 0.75};
+            tooltipColorText[] = {0.741176, 0.172549, 0.172549, 1};
             x = "SafeZoneX + (975 / 1920) * SafeZoneW";
             y = "SafeZoneY + (510 / 1080) * SafeZoneH";
             w = "(195 / 1920) * SafeZoneW";
@@ -149,7 +145,7 @@ class GVAR(Grid_Dialog) {
         };
 
         class GVAR(Grid_Button_Accept) : RscButton {
-            action = QUOTE([] call FUNC(onload_Grid_Button_Accept));
+            action = QUOTE([] call FUNC(ui_Grid_Button_Accept_action));
             borderSize = 0;
             colorBackground[] = {0.133333, 0.160784, 0.184314, 0.75};
             colorText[] = {0.741176, 0.172549, 0.172549, 1};
@@ -166,7 +162,7 @@ class GVAR(Grid_Dialog) {
             h = "(45 / 1080) * SafeZoneH";
         };
         class GVAR(Grid_Button_Cancel) : RscButton {
-            action = "closeDialog 2;";
+            action = "closeDialog 2";
             borderSize = 0;
             colorBackground[] = {0.133333, 0.160784, 0.184314, 0.75};
             colorText[] = {0.741176, 0.172549, 0.172549, 1};

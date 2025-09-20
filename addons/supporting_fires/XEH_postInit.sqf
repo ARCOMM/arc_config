@@ -147,12 +147,14 @@
 
         GVAR(previousTarget) = "None";
         GVAR(targetType) = "TargetVisual";
-        GVAR(previousTarget)Name = "your mark";
+        GVAR(previousTargetName) = "your mark";
         GVAR(ammoType) = "Smoke";
         GVAR(volumeOfFire) = 1;
         GVAR(numberOfGuns) = 1;
         GVAR(adjustmentCoords) = [0, 0];
         GVAR(adjustmentDirection) = "no adjustment";
+        GVAR(Grid_Target_X_Current) = "-1";
+        GVAR(Grid_Target_Y_Current) = "-1";
 
         if (hasInterface) then {
             if !(isNull (getAssignedCuratorLogic player)) then { //!isNil "God" && {God isEqualTo player || {group player isEqualTo group God}}) then {

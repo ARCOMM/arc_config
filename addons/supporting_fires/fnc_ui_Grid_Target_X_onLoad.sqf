@@ -5,7 +5,7 @@ params ["_displayorcontrol"];
 [
     {
         params ["_displayorcontrol"];
-        if (isNil QGVAR(Grid_Target_X_Current)) then {GVAR(Grid_Target_X_Current) = "000"};
+        if (GVAR(Grid_Target_X_Current) == "-1" || {GVAR(Grid_Target_Y_Current) == "-1"}) then {GVAR(Grid_Target_X_Current) = ""};
         _displayorcontrol ctrlSetText GVAR(Grid_Target_X_Current);
     },
     _displayorcontrol,

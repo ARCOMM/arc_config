@@ -42,9 +42,9 @@ if (_cancelled) exitWith {
 };
 
 private _adjustDir = "";
-if (_target isEqualTo "TargetLast" && {supportFire_firstRepeat}) then {
+if (_target == "TargetLast" && {GVAR(firstRepeat)}) then {
    _adjustDir = format [" %1", GVAR(adjustmentDirection)];
-    supportFire_firstRepeat = false;
+    GVAR(firstRepeat) = false;
 };
 
 private _ammoLeft = "Infinite";
@@ -96,13 +96,13 @@ if (GVAR(numberOfGuns) == 1) then {
 
 [[(format ["Roger, fire mission, %1 %2 %3, from %4 %5, on %6%7.%8", GVAR(volumeOfFire), _grammarRounds, _type, GVAR(numberOfGuns), _grammarGuns, _targetName, _adjustDir, _warning])], true] call CBA_fnc_notify;
 
-supportFire_lastTargetX = _targetXY select 0;
-supportFire_lastTargetY = _targetXY select 1;
+GVAR(lastTargetX) = _targetXY select 0;
+GVAR(lastTargetY) = _targetXY select 1;
 GVAR(adjustmentCoords) = [0, 0];
 
 private _layingDelay = 0;
-if (!GVAR(isZEUS)) then {
-    if (_target isEqualTo "TargetVisual") then {
+if !(GVAR(isZEUS)) then {
+    if (_target == "TargetVisual") then {
         // systemChat "Visual Target Delays";
        _layingDelay = round random [20, 28, 36];
     } else {

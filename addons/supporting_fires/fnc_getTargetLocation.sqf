@@ -21,15 +21,15 @@ private _targetY = 0;
 // else reset accuracy and calculate the new target
 if (_target isEqualTo "TargetLast") then {
 
-   _targetLoc = GVAR(previousTarget)Loc;
+   _targetLoc = GVAR(previousTargetLoc);
 
     if !(GVAR(isZEUS)) then {
-        if (supportFire_repeatFireBonus < 1) then {supportFire_repeatFireBonus = 1};
-        supportFire_repeatFireBonus = supportFire_repeatFireBonus + 0.2;
-        if (supportFire_repeatFireBonus >= 3) then {supportFire_repeatFireBonus = 3};
+        if (GVAR(repeatFireBonus) < 1) then {GVAR(repeatFireBonus) = 1};
+        GVAR(repeatFireBonus) = GVAR(repeatFireBonus) + 0.2;
+        if (GVAR(repeatFireBonus) >= 3) then {GVAR(repeatFireBonus) = 3};
 
-        GVAR(shellDispersion) = GVAR(originalShellDispersion) / supportFire_repeatFireBonus;
-        GVAR(shellAccuracy) = GVAR(originalShellAccuracy) / supportFire_repeatFireBonus;
+        GVAR(shellDispersion) = GVAR(originalShellDispersion) / GVAR(repeatFireBonus);
+        GVAR(shellAccuracy) = GVAR(originalShellAccuracy) / GVAR(repeatFireBonus);
     };
    _accuracy = GVAR(shellAccuracy);
 
@@ -37,8 +37,8 @@ if (_target isEqualTo "TargetLast") then {
     // systemChat (QGVAR(shellAccuracy) + " - " + str GVAR(shellAccuracy));
     // systemChat ("_accuracy - " + str _accuracy);
 
-   _targetX = (supportFire_lastTargetX) +_adjustX + (random [-_accuracy, 0, _accuracy]);
-   _targetY = (supportFire_lastTargetY) +_adjustY + (random [-_accuracy, 0, _accuracy]);
+   _targetX = (GVAR(lastTargetX)) +_adjustX + (random [-_accuracy, 0, _accuracy]);
+   _targetY = (GVAR(lastTargetY)) +_adjustY + (random [-_accuracy, 0, _accuracy]);
 
     // systemChat ("_targetX - " + str _targetX);
     // systemChat ("_targetY - " + str _targetY);
@@ -55,29 +55,29 @@ if (_target isEqualTo "TargetLast") then {
     // systemChat ("_accuracy - " + str _accuracy);
 
     // gets new target location
-    switch (true) do {
-        case (_target isEqualTo "TargetGrid") : {
+    switch (_target) do {
+        case ("TargetGrid") : {
            _targetLoc = GVAR(targetGrid);
         };
-        case (_target isEqualTo "TargetVisual") : {
+        case ("TargetVisual") : {
            _targetLoc = screenToWorld [0.5, 0.5];
         };
-        case (_target isEqualTo "Target01") : {
+        case ("Target01") : {
            _targetLoc = getMarkerPos GVAR(target01);
         };
-        case (_target isEqualTo "Target02") : {
+        case ("Target02") : {
            _targetLoc = getMarkerPos GVAR(target02);
         };
-        case (_target isEqualTo "Target03") : {
+        case ("Target03") : {
            _targetLoc = getMarkerPos GVAR(target03);
         };
-        case (_target isEqualTo "Target04") : {
+        case ("Target04") : {
            _targetLoc = getMarkerPos GVAR(target04);
         };
-        case (_target isEqualTo "Target05") : {
+        case ("Target05") : {
            _targetLoc = getMarkerPos GVAR(target05);
         };
-        case (_target isEqualTo "Target06") : {
+        case ("Target06") : {
            _targetLoc = getMarkerPos GVAR(target06);
         };
     };
@@ -85,12 +85,12 @@ if (_target isEqualTo "TargetLast") then {
 
     // sets newest target as repeat target and resets accuracy/dispersion bonus
     GVAR(previousTarget) = _target;
-    GVAR(previousTarget)Loc = _targetLoc;
-    supportFire_repeatFireBonus = 1;
+    GVAR(previousTargetLoc) = _targetLoc;
+    GVAR(repeatFireBonus) = 1;
 
     // systemChat (QGVAR(previousTarget) + " - " + str GVAR(previousTarget));
-    // systemChat ("GVAR(previousTarget)Loc - " + str GVAR(previousTarget)Loc);
-    // systemChat ("supportFire_repeatFireBonus - " + str supportFire_repeatFireBonus);
+    // systemChat ("GVAR(previousTargetLoc) - " + str GVAR(previousTargetLoc));
+    // systemChat ("GVAR(repeatFireBonus) - " + str GVAR(repeatFireBonus));
 
    _targetX = (_targetLoc select 0) + (random [-_accuracy, 0, _accuracy]);
    _targetY = (_targetLoc select 1) + (random [-_accuracy, 0, _accuracy]);

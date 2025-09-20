@@ -4,7 +4,6 @@
 
 private ["_ammoCountHE", "_ammoCountSmoke", "_ammoCountFlare"];
 // systemChat "ammo check started";
-// systemChat str supportFire_side;
 
 if (GVAR(isZEUS)) exitWith {
     [["As Zeus you have unlimited rounds for all types."], true] call CBA_fnc_notify;
