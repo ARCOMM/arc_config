@@ -17,6 +17,11 @@ if (isServer) then {
             };
         } forEach allMissionObjects "All";
     }] call CBA_fnc_waitUntilAndExecute;
+
+    ["ace_advanced_throwing_throwFiredXEH", {
+        params ["_unit", "", "", "", "", "_magazine"];
+        [side group _unit, _magazine call FUNC(getDisplayName)] call FUNC(shotCount);
+    }] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
@@ -26,14 +31,9 @@ if (hasInterface) then {
             [QGVAR(event_addEH), player] call CBA_fnc_serverEvent;
         };
     };
-
-    addMissionEventHandler ["Ended", {
-        params ["_endType"];
-        [] call FUNC(shotDisplay);
-    }];
 };
 
-["ace_advanced_throwing_throwFiredXEH", {
-    params ["_unit", "", "", "", "", "_magazine"];
-    [side group _unit, _magazine call FUNC(getDisplayName)] call FUNC(shotCount);
-}] call CBA_fnc_addEventHandler;
+addMissionEventHandler ["Ended", {
+    params ["_endType"];
+    [] call FUNC(shotDisplay);
+}];
