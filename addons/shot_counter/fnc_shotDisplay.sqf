@@ -27,45 +27,41 @@ if (hasInterface) then {
 
         GVAR(countTextPlayer) = format ["%1<br/>%2: %3<br/>", GVAR(countTextPlayer), GVAR(playerHits) select 0, GVAR(playerHits) select 1];
 
-        GVAR(countTextPlayer) = format ["%1<br/>Accuracy: %2%%", GVAR(countTextPlayer), ((GVAR(playerHits) select 1) / (GVAR(playerExpendedAmmunition) select 1) * 100) toFixed 2];
+        GVAR(countTextPlayer) = format ["%1<br/>Accuracy: %2%%", GVAR(countTextPlayer), (((GVAR(playerHits) select 1) / (GVAR(playerExpendedAmmunition) select 1)) * 100) toFixed 2];
     } else {
         GVAR(countTextPlayer) = format ["%1None", GVAR(countTextPlayer)];
     };
 };
 
-if (isServer) then {
-    // Do ammo count for each team
-    if ((GVAR(expendedAmmunitionWest) select 1) > 0) then {
-        GVAR(textBluefor) = "BLUFOR - Munitions Expended:<br/>";
-        for [{ _i = 0}, {_i < count GVAR(expendedAmmunitionWest)}, {_i = _i + 2}] do {
-            GVAR(textBluefor) = format ["%1%2: %3 Rounds<br/>", GVAR(textBluefor), GVAR(expendedAmmunitionWest) select _i, GVAR(expendedAmmunitionWest) select (_i + 1)];
-        };
-        GVAR(textBluefor) = format ["%1<br/><br/>", GVAR(textBluefor)];
-    } else {
-        GVAR(textBluefor) = "";
+// Do ammo count for each team
+if ((GVAR(expendedAmmunitionWest) select 1) > 0) then {
+    GVAR(textBluefor) = "BLUFOR - Munitions Expended:<br/>";
+    for [{ _i = 0}, {_i < count GVAR(expendedAmmunitionWest)}, {_i = _i + 2}] do {
+        GVAR(textBluefor) = format ["%1%2: %3 Rounds<br/>", GVAR(textBluefor), GVAR(expendedAmmunitionWest) select _i, GVAR(expendedAmmunitionWest) select (_i + 1)];
     };
-
-    if ((GVAR(expendedAmmunitionEast) select 1) > 0) then {
-        GVAR(textOpfor) = "OPFOR - Munitions Expended:<br/>";
-        for [{ _i = 0}, {_i < count GVAR(expendedAmmunitionEast)}, {_i = _i + 2}] do {
-            GVAR(textOpfor) = format ["%1%2: %3 Rounds<br/>", GVAR(textOpfor), GVAR(expendedAmmunitionEast) select _i, GVAR(expendedAmmunitionEast) select (_i + 1)];
-        };
-        GVAR(textOpfor) = format ["%1<br/><br/>", GVAR(textOpfor)];
-    } else {
-        GVAR(textOpfor) = "";
-    };
-
-    if ((GVAR(expendedAmmunitionResistance) select 1) > 0) then {
-        GVAR(textResistance) = "INDEPENDENT - Munitions Expended:<br/>";
-        for [{ _i = 0}, {_i < count GVAR(expendedAmmunitionResistance)}, {_i = _i + 2}] do {
-            GVAR(textResistance) = format ["%1%2: %3 Rounds<br/>", GVAR(textResistance), GVAR(expendedAmmunitionResistance) select _i, GVAR(expendedAmmunitionResistance) select (_i + 1)];
-        };
-        GVAR(textResistance) = format ["%1<br/><br/>", GVAR(textResistance)];
-    } else {
-        GVAR(textResistance) = "";
-    };
-
-    GVAR(countTextTeams) = format ["%1%2%3", GVAR(textBluefor), GVAR(textOpfor), GVAR(textResistance)];
-
-    publicVariable QGVAR(countTextTeams);
+    GVAR(textBluefor) = format ["%1<br/><br/>", GVAR(textBluefor)];
+} else {
+    GVAR(textBluefor) = "";
 };
+
+if ((GVAR(expendedAmmunitionEast) select 1) > 0) then {
+    GVAR(textOpfor) = "OPFOR - Munitions Expended:<br/>";
+    for [{ _i = 0}, {_i < count GVAR(expendedAmmunitionEast)}, {_i = _i + 2}] do {
+        GVAR(textOpfor) = format ["%1%2: %3 Rounds<br/>", GVAR(textOpfor), GVAR(expendedAmmunitionEast) select _i, GVAR(expendedAmmunitionEast) select (_i + 1)];
+    };
+    GVAR(textOpfor) = format ["%1<br/><br/>", GVAR(textOpfor)];
+} else {
+    GVAR(textOpfor) = "";
+};
+
+if ((GVAR(expendedAmmunitionResistance) select 1) > 0) then {
+    GVAR(textResistance) = "INDEPENDENT - Munitions Expended:<br/>";
+    for [{ _i = 0}, {_i < count GVAR(expendedAmmunitionResistance)}, {_i = _i + 2}] do {
+        GVAR(textResistance) = format ["%1%2: %3 Rounds<br/>", GVAR(textResistance), GVAR(expendedAmmunitionResistance) select _i, GVAR(expendedAmmunitionResistance) select (_i + 1)];
+    };
+    GVAR(textResistance) = format ["%1<br/><br/>", GVAR(textResistance)];
+} else {
+    GVAR(textResistance) = "";
+};
+
+GVAR(countTextTeams) = format ["%1%2%3", GVAR(textBluefor), GVAR(textOpfor), GVAR(textResistance)];

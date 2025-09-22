@@ -22,6 +22,16 @@ if (isServer) then {
         params ["_unit", "", "", "", "", "_magazine"];
         [side group _unit, _magazine call FUNC(getDisplayName)] call FUNC(shotCount);
     }] call CBA_fnc_addEventHandler;
+
+    [
+        {
+            publicVariable QGVAR(expendedAmmunitionWest);
+            publicVariable QGVAR(expendedAmmunitionEast);
+            publicVariable QGVAR(expendedAmmunitionResistance);
+        },
+        1, //time between checks in seconds. 0 = each frame
+        []
+    ] call CBA_fnc_addPerFrameHandler;
 };
 
 if (hasInterface) then {
