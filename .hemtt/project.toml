@@ -7,9 +7,12 @@ mainprefix = "z"
 include = [
     "logo_arc_ca.paa"
 ]
+exclude = [
+    ".inc.sqf",
+]
 
 [version]
-git_hash = 0
+git_hash = 8
 
 [hemtt.config]
 preset = "Hemtt"

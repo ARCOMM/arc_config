@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        name = CSTRING(component);
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -16,5 +16,7 @@ class CfgPatches {
         skipWhenMissingDependencies = 1;
     };
 };
+
+#include "CfgMagazines.hpp"
 
 #include "CfgWeapons.hpp"

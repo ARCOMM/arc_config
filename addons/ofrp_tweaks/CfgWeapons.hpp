@@ -61,6 +61,6 @@ class CfgWeapons {
     };
 
     class OFrP_PGM_Hecate2_Base: GM6_base_F {
-        magazineWell[] = {"CBA_762x51_HK417"};
+        magazineWell[] = {"CBA_50BMG_PGM_Hecate_II"};
     };
 };

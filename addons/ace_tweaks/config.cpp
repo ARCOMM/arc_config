@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        name = CSTRING(component);
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
@@ -20,5 +20,6 @@ class CfgPatches {
 
 #include "ACE_detector.hpp"
 #include "ace_medical_replacementItems.hpp"
+#include "ace_medical_treatment.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"
