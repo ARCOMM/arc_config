@@ -140,6 +140,7 @@ jsrs2025_sounds_character
 jsrs2025_sounds_explosions
 jsrs2025_sounds_sfx
 jsrs2025_sounds_weapons
+jsrs2025_sounds_vehicles
 jsrs2025_config_c
 jsrs2025_functions
 jsrs2025_sounds_es
