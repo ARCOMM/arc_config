@@ -165,6 +165,7 @@ jsrs2025_compat_ace3
 jsrs2025_compat_bwa3
 jsrs2025_compat_cup_weapons
 jsrs2025_compat_cup_vehicles
+jsrs2025_compat_ef
 Flex_CUP_PLA_Weapons_JSRSPatch
 Flex_CUP_PLA_Weapons_Rifles_QBZ95_JSRSPatch
 DEVGRU_RedSquadron_Cracks
