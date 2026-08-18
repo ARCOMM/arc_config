@@ -173,3 +173,6 @@ DEVGRU_RedSquadron_Sounds
 kog_jsrs_soundmod_patches
 jsrs_soundmod_ce_reloadingsounds
 jsrs_soundmod_reloadingsounds
+OCAP_main
+OCAP_extension
+OCAP_recorder
